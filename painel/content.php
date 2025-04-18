@@ -112,7 +112,7 @@ $dadosCount = mysqli_fetch_object(mysqli_query($con, $queryCount));
             <div class="card-body">
 
                 <?php
-                    echo $query = "select a.*, (select count(*) from servicos where deletado = '0') as geral,  (select count(*) from servicos where deletado = '0' and tipo = a.codigo) as quantidade from servico_tipo a where a.deletado = '0' order by a.tipo";
+                    $query = "select a.*, (select count(*) from servicos where deletado = '0') as geral,  (select count(*) from servicos where deletado = '0' and tipo = a.codigo) as quantidade from servico_tipo a where a.deletado = '0' order by a.tipo";
                     $result = mysqli_query($con, $query);
                     while($d = mysqli_fetch_object($result)){
                         $pct = number_format(($d->quantidade*100)/(($d->geral)?:1),0,false,false);
