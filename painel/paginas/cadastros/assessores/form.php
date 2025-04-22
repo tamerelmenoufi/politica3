@@ -221,7 +221,7 @@ if ($codigo) {
                 </div>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="responsavel">
                     Responsavel <i class="text-danger">*</i>
                 </label>
@@ -244,7 +244,8 @@ if ($codigo) {
 
                 </select>
 
-            </div>
+            </div> -->
+
             <input type="hidden" id="codigo" value="<?= $codigo; ?>">
 
             <button type="submit" class="btn btn-success">Salvar</button>
