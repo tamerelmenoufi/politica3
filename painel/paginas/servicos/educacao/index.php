@@ -90,7 +90,7 @@ $_SESSION['saude_xls'] = false;
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb shadow bg-gray-custom">
         <li class="breadcrumb-item"><a href="#" url="content.php">Início</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Certidão de Nascimento (Foram encontrados <?=$total?> registros, exibidos em páginas de <?=$limite?>)</li>
+        <li class="breadcrumb-item active" aria-current="page">Educação (Foram encontrados <?=$total?> registros, exibidos em páginas de <?=$limite?>)</li>
     </ol>
 </nav>
 
