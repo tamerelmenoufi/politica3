@@ -74,6 +74,11 @@
                 <a class="collapse-item" href="#" acao="limpar_busca" url="paginas/servicos/juridico/index.php?categoria=l">Jurídico</a>
                 <?php
                 }
+                if(in_array('Educação - Visualizar', $ConfPermissoes)){
+                ?>
+                <a class="collapse-item" href="#" acao="limpar_busca" url="paginas/servicos/educacao/index.php?categoria=l">Educação</a>
+                <?php
+                }
                 ?>
                 <h6 class="collapse-header">Saúde</h6>
                 <?php
