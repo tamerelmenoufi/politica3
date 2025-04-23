@@ -126,12 +126,12 @@ if ($codigo) {
             <input type="hidden" id="tipo" name="tipo" value="1"/>
 
             <?php
-                $query = "SELECT * FROM especialidades where servico_tipo = '1' ORDER BY descricao";
-                $result = mysqli_query($con, $query);
-                if(mysqli_num_rows($result)){
+                // $query = "SELECT * FROM especialidades where servico_tipo = '1' ORDER BY descricao";
+                // $result = mysqli_query($con, $query);
+                // if(mysqli_num_rows($result)){
             ?>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="especialidade">
                     Especialidade <i class="text-danger">*</i>
                 </label>
@@ -155,9 +155,9 @@ if ($codigo) {
                     <?php endwhile; ?>
                 </select>
 
-            </div>
+            </div> -->
             <?php
-                }
+                // }
             ?>
 
 
