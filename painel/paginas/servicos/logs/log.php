@@ -183,7 +183,7 @@ if ($codigo) {
                 >
                     <option value=""></option>
                     <?php
-                    $query = "SELECT * FROM local_fontes ORDER BY descricao";
+                    $query = "SELECT * FROM local_fontes where deletado != '1' ORDER BY descricao";
                     $result = mysqli_query($con, $query);
 
                     while ($l = mysqli_fetch_object($result)): ?>

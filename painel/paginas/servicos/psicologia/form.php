@@ -288,7 +288,7 @@ if ($codigo) {
                 >
                     <option value=""></option>
                     <?php
-                    $query = "SELECT * FROM local_fontes where servico_tipo = '5' ORDER BY descricao";
+                    $query = "SELECT * FROM local_fontes where servico_tipo = '5' and deletado != '1' ORDER BY descricao";
                     $result = mysqli_query($con, $query);
 
                     while ($l = mysqli_fetch_object($result)): ?>
