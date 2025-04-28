@@ -123,7 +123,7 @@ if ($codigo) {
     <div class="card-body">
         <form id="form-servicos">
 
-            <input type="hidden" id="tipo" name="tipo" value="1"/>
+            <input type="hidden" id="tipo" name="tipo" value="2"/>
 
             <?php
                 // $query = "SELECT * FROM especialidades where servico_tipo = '1' ORDER BY descricao";
@@ -293,7 +293,7 @@ if ($codigo) {
                 >
                     <option value=""></option>
                     <?php
-                    $query = "SELECT * FROM local_fontes where servico_tipo = '1' and deletado != '1' ORDER BY descricao";
+                    $query = "SELECT * FROM local_fontes where servico_tipo = '2' and deletado != '1' ORDER BY descricao";
                     $result = mysqli_query($con, $query);
 
                     while ($l = mysqli_fetch_object($result)): ?>
