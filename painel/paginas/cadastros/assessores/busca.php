@@ -15,7 +15,7 @@ include "config_assessores.php";
     if($_POST['campo_busca']){
 
 
-        $query = "select * from assessores where nome like '%{$_POST['campo_busca']}%' or cpf = '{$_POST['campo_busca']}'";
+        $query = "select * from assessores where (nome like '%{$_POST['campo_busca']}%' or cpf = '{$_POST['campo_busca']}') and perfil = 'confirmado'";
         $result = mysqli_query($con, $query);
         while($d = mysqli_fetch_object($result)){
 ?>
