@@ -101,8 +101,8 @@ $d = mysqli_fetch_object($result);
             <div class="col-md-8"><?= $d->endereco; ?></div>
         </div>
         <div class="row">
-            <div class="col-md-4 font-weight-bold">Responsável</div>
-            <div class="col-md-8"><?= $d->responsavel; ?></div>
+            <div class="col-md-4 font-weight-bold">Perfil</div>
+            <div class="col-md-8"><?= $d->perfil; ?></div>
         </div>
     </div>
 </div>

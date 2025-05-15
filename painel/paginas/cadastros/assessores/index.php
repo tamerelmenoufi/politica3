@@ -136,7 +136,7 @@ $result = mysqli_query($con, $query);
                 <tr>
                     <th>Nome</th>
                     <th>CPF</th>
-                    <th>Responsável</th>
+                    <th>Perfil</th>
                     <th class="mw-20">Ações</th>
                 </tr>
                 </thead>
@@ -145,7 +145,7 @@ $result = mysqli_query($con, $query);
                     <tr id="linha-<?= $d->codigo; ?>">
                         <td><?= $d->nome ?></td>
                         <td><?= $d->cpf; ?></td>
-                        <td><?= $d->responsavel; ?></td>
+                        <td><?= $d->perfil; ?></td>
                         <td>
                             <button
                                     class="btn btn-sm btn-link"
