@@ -88,14 +88,14 @@ if ($codigo) {
             </div>
 
             <div class="form-group">
-                <label for="nome_mae">Nome da mãe <i class="text-danger">*</i></label>
+                <label for="nome_mae">Nome da mãe <i class="text-danger"></i></label>
                 <input
                         type="text"
                         class="form-control"
                         id="nome_mae"
                         name="nome_mae"
                         value="<?= $d->nome_mae; ?>"
-                        required
+                        
                 >
             </div>
 
@@ -116,7 +116,7 @@ if ($codigo) {
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="data_nascimento">
-                            Data de Nascimento <i class="text-danger">*</i>
+                            Data de Nascimento <i class="text-danger"></i>
                         </label>
                         <input
                                 type="date"
@@ -124,7 +124,7 @@ if ($codigo) {
                                 id="data_nascimento"
                                 name="data_nascimento"
                                 value="<?= $d->data_nascimento; ?>"
-                                required
+                                
                         >
 
                     </div>
