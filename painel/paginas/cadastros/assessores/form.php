@@ -246,6 +246,25 @@ if ($codigo) {
 
             </div> -->
 
+
+            <div class="form-group">
+                <label for="perfil">
+                    Perfil <i class="text-danger">*</i>
+                </label>
+                <select
+                        class="form-control"
+                        id="perfil"
+                        name="perfil"
+                        required
+                >
+                    <option value=""></option>
+                    <option <?= ($d->perfil == 'confirmado') ? "selected" : ""; ?> value="confirmado">Confirmado</option>
+                    <option <?= ($d->perfil == 'reserva') ? "selected" : ""; ?> value="reserva">Reserva</option>
+
+                </select>
+
+            </div>
+
             <input type="hidden" id="codigo" value="<?= $codigo; ?>">
 
             <button type="submit" class="btn btn-success">Salvar</button>
