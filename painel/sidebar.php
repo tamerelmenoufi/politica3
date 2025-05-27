@@ -145,7 +145,7 @@
         </div>
     </li>
     <?php
-    if(in_array('Relatórios', $ConfPermissoes)){
+    // if(in_array('Relatórios', $ConfPermissoes)){
     ?>
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#relatorios"
@@ -167,7 +167,7 @@
         </div>
     </li>
     <?php
-    }
+    // }
     ?>
 
     <li class="nav-item">
