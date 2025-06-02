@@ -22,7 +22,7 @@
         'rgba(255, 159, 64, 1)'
     ];
 
-    echo $query = "SELECT a.nome AS descricao, COUNT(*) AS qt FROM servicos s "
+    $query = "SELECT a.nome AS descricao, COUNT(*) AS qt FROM servicos s "
     ."INNER JOIN assessores a ON a.codigo = s.assessor "
     ."GROUP BY a.nome ORDER BY qt DESC";
 
@@ -83,7 +83,7 @@ const myChart<?=$md5?> = new Chart(ctx<?=$md5?>,
   data: {
         labels: [<?=$lg?>],
         datasets: [{
-            label:  [<?=$lg?>],
+            //label:  [<?=$lg?>],
             data: [<?=$qt?>],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
