@@ -78,79 +78,76 @@
 
 const ctx<?=$md5?> = document.getElementById('myChart<?=$md5?>');
 const myChart<?=$md5?> = new Chart(ctx<?=$md5?>,
-{
-  type: 'bar',
-  data: {
-        labels: [<?=$lg?>],
-        datasets: [{
-            //label:  [<?=$lg?>],
-            data: [<?=$qt?>],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1,
-            rotulos:[<?=$Lg?>]
-        }]
-    },
-  options: {
-    indexAxis: 'y',
-    // Elements options apply to all of the options unless overridden in a dataset
-    // In this case, we are setting the border of each horizontal bar to be 2px wide
-    elements: {
-      bar: {
-        borderWidth: 2,
-      }
-    },
-    responsive: false,
-    plugins: {
-      legend: false/*{
-        position: 'right',
-      }*/,
-      title: {
-        display: true,
-        text: 'Quantidade de serviços por assessores'
-      },
+    {
+        type: 'bar',
+        data: {
+            labels: [<?=$lg?>],
+            datasets: [{
+                label: [<?=$lg?>],
+                data: [<?=$qt?>],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1,
+                rotulos: [<?=$Lg?>]
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            // Elements options apply to all of the options unless overridden in a dataset
+            // In this case, we are setting the border of each horizontal bar to be 2px wide
+            elements: {
+                bar: {
+                    borderWidth: 2,
+                }
+            },
+            responsive: true,
+            plugins: {
+                legend: false/*{
+    position: 'right',
+  }*/,
+                title: {
+                    display: true,
+                    text: 'Quantitativo de Serviços por Assessores'
+                },
 
 
+                tooltip: {
+                    callbacks: {
+                        title: function (context) {
+                            indx = context[0].parsed.y;
+                            return context[0].dataset.rotulos[indx];
+                        },
+                        label: function (context) {
+                            indx = context.parsed.y;
+                            var label = ' ' + context.dataset.label[indx] || '';
 
-      tooltip: {
-                callbacks: {
-                    title: function(context){
-                        indx = context[0].parsed.y;
-                        return context[0].dataset.rotulos[indx];
-                    },
-                    label: function(context) {
-                        indx = context.parsed.y;
-                        var label = ' ' + context.dataset.label[indx] || '';
-
-                        if (label) {
-                            label += ' : ';
+                            if (label) {
+                                label += ' : ';
+                            }
+                            if (context.parsed.y !== null) {
+                                label += context.parsed.x + ' Registro(s)';
+                            }
+                            return label;
                         }
-                        if (context.parsed.y !== null) {
-                            label += context.parsed.x + ' Registro(s)';
-                        }
-                        return label;
                     }
                 }
+
             }
-
+        },
     }
-  },
-}
-
-
 );
 </script>
