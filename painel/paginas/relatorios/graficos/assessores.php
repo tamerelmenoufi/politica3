@@ -43,7 +43,7 @@
 
 
 <h5>Relatório Por Assessores</h5>
-<canvas id="myChart<?=$md5?>" style="width:100%; height:<?=30*$n?>px"></canvas>
+<canvas id="myChart<?=$md5?>" style="width:100%;"></canvas>
 
 <a style="margin:10px;" class="btn btn-warning" href='./paginas/relatorios/graficos/download/assessores.php' target='_blank'>
   <i class="fa fa-download"></i> Baixar
