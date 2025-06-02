@@ -22,7 +22,7 @@
         'rgba(255, 159, 64, 1)'
     ];
 
-    $query = "SELECT a.nome AS descricao, COUNT(*) AS qt FROM servicos s "
+    echo $query = "SELECT a.nome AS descricao, COUNT(*) AS qt FROM servicos s "
     ."INNER JOIN assessores a ON a.codigo = s.assessor "
     ."GROUP BY a.nome ORDER BY qt DESC";
 
